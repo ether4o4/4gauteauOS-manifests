@@ -1,0 +1,11 @@
+# Your personal config (contains PII) - never commit this.
+config.json
+
+# Generated reports.
+footprint-*.json
+footprint-*.html
+latest.html
+
+# Python bytecode cache.
+__pycache__/
+*.pyc

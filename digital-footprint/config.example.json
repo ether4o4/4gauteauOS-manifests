@@ -1,0 +1,12 @@
+{
+  "name": { "first": "Jane", "last": "Doe", "full": "" },
+  "emails": ["jane.doe@example.com"],
+  "phones": ["+1 555 123 4567"],
+  "usernames": ["janedoe", "jdoe"],
+  "location": { "city": "Austin", "state": "TX", "country": "US" },
+  "hibp_api_key": "",
+  "output_dir": "",
+  "tools": { "sherlock": true, "maigret": false, "holehe": true },
+  "probe_brokers": true,
+  "timeout": 12
+}
