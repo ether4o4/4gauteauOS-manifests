@@ -11,8 +11,33 @@ Find every file matching a keyword anywhere under a folder, then run a small
 | File | What it is |
 |------|------------|
 | `Restructure-ByKeyword.ps1` | The tool itself (search + forensic menu + restructure). |
+| `Launch-ForensicToolkit.cmd` | Double-clickable launcher (no command line needed). |
+| `Deploy-ToDesktop.ps1` | Copies the toolkit to your Desktop + makes a clickable shortcut. |
 | `Install-Shortcut.ps1` | Wires the tool into your PowerShell profile as `restruct` / `fkr`. |
 | `Restructure-ByKeyword.md` | This guide. |
+
+---
+
+## Put it on your Desktop (double-click to launch)
+
+**Easiest:** with all the toolkit files in one folder, run this once:
+
+```powershell
+.\Deploy-ToDesktop.ps1
+```
+
+It copies the toolkit into `Desktop\Keyword Forensic Toolkit\` and drops a
+**"Keyword Forensic Toolkit"** shortcut on your Desktop. Double-click it and the
+toolkit opens in a console window — it asks which folder to search (default:
+your Desktop), then drops you into the menu.
+
+> You can also **drag any folder onto the shortcut** to search that folder.
+
+**Manual alternative:** copy `Restructure-ByKeyword.ps1` and
+`Launch-ForensicToolkit.cmd` (keep them together) anywhere you like — e.g. your
+Desktop — and double-click `Launch-ForensicToolkit.cmd`. The `.cmd` already runs
+PowerShell with the execution policy bypassed, so there's nothing else to set
+up.
 
 ---
 
