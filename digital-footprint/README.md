@@ -5,6 +5,20 @@ see where your data shows up, then use the included opt-out links to request
 removal from data brokers. Run it periodically; each report flags anything
 **new since your last run**.
 
+---
+
+## 🟢 Just want the simple version? (no install)
+
+**Double-click `Footprint-Quick.cmd`.** Type your details once, and it opens a
+report in your browser with click-to-run web searches and one-click **Opt out**
+buttons for every data broker. No Python, no setup, no API keys. Reports save to
+your Desktop `digital footprint` folder.
+
+Everything below is the *advanced* version (Python + OSINT tools) that detects
+hits automatically. You don't need it to get started.
+
+---
+
 > Intended for checking your own information and accounts you control, to
 > support privacy / data-removal requests. Built-in checks are best-effort and
 > can return false positives or be blocked by anti-bot measures — confirm before
