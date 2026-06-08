@@ -1,0 +1,22 @@
+[
+  { "name": "GitHub",       "url": "https://github.com/{u}" },
+  { "name": "GitLab",       "url": "https://gitlab.com/{u}" },
+  { "name": "Keybase",      "url": "https://keybase.io/{u}" },
+  { "name": "Medium",       "url": "https://medium.com/@{u}" },
+  { "name": "Dev.to",       "url": "https://dev.to/{u}" },
+  { "name": "Replit",       "url": "https://replit.com/@{u}" },
+  { "name": "SoundCloud",   "url": "https://soundcloud.com/{u}" },
+  { "name": "Vimeo",        "url": "https://vimeo.com/{u}" },
+  { "name": "Pinterest",    "url": "https://www.pinterest.com/{u}/" },
+  { "name": "YouTube",      "url": "https://www.youtube.com/@{u}" },
+  { "name": "Linktree",     "url": "https://linktr.ee/{u}" },
+  { "name": "About.me",     "url": "https://about.me/{u}" },
+  { "name": "Gravatar",     "url": "https://en.gravatar.com/{u}" },
+  { "name": "Tumblr",       "url": "https://{u}.tumblr.com" },
+  { "name": "Steam",        "url": "https://steamcommunity.com/id/{u}",       "absent_text": "The specified profile could not be found" },
+  { "name": "Telegram",     "url": "https://t.me/{u}",                        "present_text": "tgme_page_title" },
+  { "name": "Reddit",       "url": "https://www.reddit.com/user/{u}",         "absent_text": "nobody on Reddit goes by that name" },
+  { "name": "Hacker News",  "url": "https://news.ycombinator.com/user?id={u}", "absent_text": "No such user." },
+  { "name": "TikTok",       "url": "https://www.tiktok.com/@{u}",             "absent_text": "Couldn't find this account" },
+  { "name": "DeviantArt",   "url": "https://www.deviantart.com/{u}" }
+]
