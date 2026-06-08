@@ -46,8 +46,38 @@ def strip_ansi(s):
     return ANSI.sub("", s or "")
 
 
+def _windows_desktop():
+    """Find the real Desktop on Windows, including OneDrive-redirected ones."""
+    # The registry is authoritative and reflects OneDrive Known Folder Move.
+    try:
+        import winreg
+        key = winreg.OpenKey(
+            winreg.HKEY_CURRENT_USER,
+            r"Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders")
+        try:
+            val, _ = winreg.QueryValueEx(key, "Desktop")
+        finally:
+            winreg.CloseKey(key)
+        val = os.path.expandvars(val)          # e.g. %USERPROFILE%\OneDrive\Desktop
+        if val and os.path.isdir(val):
+            return val
+    except Exception:
+        pass
+    # Fallback: a OneDrive env var pointing at a Desktop.
+    for env in ("OneDrive", "OneDriveCommercial", "OneDriveConsumer"):
+        base = os.environ.get(env)
+        if base and os.path.isdir(os.path.join(base, "Desktop")):
+            return os.path.join(base, "Desktop")
+    return None
+
+
 def default_output_dir():
-    return os.path.join(os.path.expanduser("~"), "Desktop", "digital footprint")
+    desktop = _windows_desktop() if sys.platform.startswith("win") else None
+    if not desktop:
+        home = os.path.expanduser("~")
+        onedrive = os.path.join(home, "OneDrive", "Desktop")
+        desktop = onedrive if os.path.isdir(onedrive) else os.path.join(home, "Desktop")
+    return os.path.join(desktop, "digital footprint")
 
 
 def load_json(path, default=None):

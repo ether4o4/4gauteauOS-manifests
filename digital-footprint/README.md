@@ -24,7 +24,9 @@ removal from data brokers. Run it periodically; each report flags anything
 | **Change tracking** | Each run is saved and diffed against the previous one; new findings are highlighted. |
 
 Reports (HTML + JSON) are written to **`Desktop\digital footprint\`**, plus a
-`latest.html` that always points at the newest one.
+`latest.html` that always points at the newest one. OneDrive-redirected
+Desktops (e.g. `C:\Users\you\OneDrive\Desktop`) are detected automatically; set
+`output_dir` in `config.json` to force a specific folder.
 
 ---
 
